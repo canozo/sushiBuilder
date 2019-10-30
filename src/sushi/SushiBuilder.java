@@ -1,92 +1,55 @@
 package sushi;
 
-public class SushiBuilder {
+public abstract class SushiBuilder {
 
-    private String nombre;
-    private String pescado;
-    private String huevas;
-    private boolean wasabi;
-    private String camaron;
-    private boolean pepino;
-    private String aguacate;
-    private boolean pinia;
+    String nombre;
+    String pescado;
+    String huevas;
+    boolean wasabi;
+    String camaron;
+    boolean pepino;
+    String aguacate;
+    boolean pinia;
 
-    public SushiBuilder() {
-    }
+    public abstract Sushi build();
+    public abstract SushiBuilder nombre();
+    public abstract SushiBuilder pescado();
+    public abstract SushiBuilder huevas();
+    public abstract SushiBuilder wasabi();
+    public abstract SushiBuilder camaron();
+    public abstract SushiBuilder pepino();
+    public abstract SushiBuilder aguacate();
+    public abstract SushiBuilder pinia();
 
-    public Sushi build() {
-        return new Sushi(this);
-    }
-
-    public SushiBuilder nombre(String nombre) {
-        this.nombre = nombre;
-        return this;
-    }
-
-    public SushiBuilder pescado(String pescado) {
-        this.pescado = pescado;
-        return this;
-    }
-
-    public SushiBuilder huevas(String huevas) {
-        this.huevas = huevas;
-        return this;
-    }
-
-    public SushiBuilder wasabi(boolean wasabi) {
-        this.wasabi = wasabi;
-        return this;
-    }
-
-    public SushiBuilder camaron(String camaron) {
-        this.camaron = camaron;
-        return this;
-    }
-
-    public SushiBuilder pepino(boolean pepino) {
-        this.pepino = pepino;
-        return this;
-    }
-
-    public SushiBuilder aguacate(String aguacate) {
-        this.aguacate = aguacate;
-        return this;
-    }
-
-    public SushiBuilder pinia(boolean pinia) {
-        this.pinia = pinia;
-        return this;
-    }
-
-    public String getNombre() {
+    String getNombre() {
         return nombre;
     }
 
-    public String getPescado() {
+    String getPescado() {
         return pescado;
     }
 
-    public String getHuevas() {
+    String getHuevas() {
         return huevas;
     }
 
-    public boolean getWasabi() {
+    boolean getWasabi() {
         return wasabi;
     }
 
-    public String getCamaron() {
+    String getCamaron() {
         return camaron;
     }
 
-    public boolean getPepino() {
+    boolean getPepino() {
         return pepino;
     }
 
-    public String getAguacate() {
+    String getAguacate() {
         return aguacate;
     }
 
-    public boolean getPinia() {
+    boolean getPinia() {
         return pinia;
     }
 }

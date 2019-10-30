@@ -1,5 +1,7 @@
+import sushi.RumbaSushiBuilder;
 import sushi.Sushi;
 import sushi.SushiBuilder;
+import sushi.TakiSushiBuilder;
 
 import java.util.ArrayList;
 
@@ -15,25 +17,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        SushiBuilder takiBuilder = new SushiBuilder()
-            .nombre("taki taki")
-            .pescado("salmon")
-            .huevas("gamba")
-            .wasabi(true)
-            .camaron("agua fria")
-            .pepino(true)
-            .aguacate("pinkerton")
-            .pinia(false);
+        SushiBuilder takiBuilder = new TakiSushiBuilder()
+            .nombre()
+            .pescado()
+            .huevas()
+            .wasabi()
+            .camaron()
+            .pepino()
+            .aguacate()
+            .pinia();
 
-        SushiBuilder rumbaBuilder = new SushiBuilder()
-            .nombre("rumba")
-            .pescado("atun")
-            .huevas("caviar")
-            .wasabi(false)
-            .camaron("rio")
-            .pepino(true)
-            .aguacate("bacon")
-            .pinia(true);
+        SushiBuilder rumbaBuilder = new RumbaSushiBuilder()
+            .nombre()
+            .pescado()
+            .huevas()
+            .wasabi()
+            .camaron()
+            .pepino()
+            .aguacate()
+            .pinia();
 
         sushis.add(takiBuilder.build());
         sushis.add(rumbaBuilder.build());
