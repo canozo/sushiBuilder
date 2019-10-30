@@ -24,15 +24,23 @@ public class Sushi {
 
     @Override
     public String toString() {
-        return "Sushi{" +
-                "nombre='" + nombre + '\'' +
-                ", pescado='" + pescado + '\'' +
-                ", huevas='" + huevas + '\'' +
-                ", wasabi=" + wasabi +
-                ", camaron='" + camaron + '\'' +
-                ", pepino=" + pepino +
-                ", aguacate='" + aguacate + '\'' +
-                ", pinia=" + pinia +
-                '}';
+        final StringBuffer sb = new StringBuffer("Sushi{");
+        sb.append("nombre='").append(nombre).append('\'');
+        if (pescado != null)
+            sb.append(", pescado='").append(pescado).append('\'');
+        if (huevas != null)
+            sb.append(", huevas='").append(huevas).append('\'');
+        if (wasabi)
+            sb.append(", wasabi=").append(wasabi);
+        if (camaron != null)
+            sb.append(", camaron='").append(camaron).append('\'');
+        if (pepino)
+            sb.append(", pepino=").append(pepino);
+        if (aguacate != null)
+            sb.append(", aguacate='").append(aguacate).append('\'');
+        if (pinia)
+            sb.append(", pinia=").append(pinia);
+        sb.append('}');
+        return sb.toString();
     }
 }

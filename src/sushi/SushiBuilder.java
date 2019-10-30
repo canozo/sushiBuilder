@@ -11,15 +11,17 @@ public abstract class SushiBuilder {
     String aguacate;
     boolean pinia;
 
-    public abstract Sushi build();
-    public abstract SushiBuilder nombre();
-    public abstract SushiBuilder pescado();
-    public abstract SushiBuilder huevas();
-    public abstract SushiBuilder wasabi();
-    public abstract SushiBuilder camaron();
-    public abstract SushiBuilder pepino();
-    public abstract SushiBuilder aguacate();
-    public abstract SushiBuilder pinia();
+    public abstract SushiBuilder pescado(String pescado);
+    public abstract SushiBuilder huevas(String huevas);
+    public abstract SushiBuilder wasabi(boolean wasabi);
+    public abstract SushiBuilder camaron(String camaron);
+    public abstract SushiBuilder pepino(boolean pepino);
+    public abstract SushiBuilder aguacate(String aguacate);
+    public abstract SushiBuilder pinia(boolean pinia);
+
+    public Sushi build() {
+        return new Sushi(this);
+    }
 
     String getNombre() {
         return nombre;
